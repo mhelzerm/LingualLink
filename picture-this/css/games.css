@@ -131,6 +131,12 @@
     line-height: 1.4;
 }
 
+a.game-option {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+}
+
 /* Compact Footer */
 footer {
     background-color: var(--primary-dark);
