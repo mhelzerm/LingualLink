@@ -272,10 +272,23 @@ footer {
     font-size: 18px;
     font-weight: 700;
     padding: 15px;
-    border-radius: 15px 40px;
+    border-radius: 30px 30px;
     text-decoration: none;
     transition: background-color 0.3s;
     translate: 950px;
+}
+
+.module-btn{
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 7px;
+    border-radius: 10px 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    translate:150px;
 }
 
 /* ---------- ABOUT PAGE STYLES ---------- */
@@ -681,6 +694,38 @@ footer {
 }
 
 /* ---------- HOST GAME STYLES ---------- */
+
+/* Picking Modules */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.modules {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.modules-card {
+    background-color: #f9f7fe70;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.modules-icon {
+    margin-bottom: 10px;
+    text-align: center;
+}
 
 /* Loading Screen */
 .loader{
