@@ -265,6 +265,19 @@ footer {
     background-color: var(--primary-dark);
 }
 
+.cta-btn {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px;
+    border-radius: 15px 40px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    translate: 950px;
+}
+
 /* ---------- ABOUT PAGE STYLES ---------- */
 
 /* Mission section */
@@ -665,6 +678,19 @@ footer {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+/* ---------- HOST GAME STYLES ---------- */
+
+/* Loading Screen */
+.loader{
+    font-size: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 /* ---------- FAQ PAGE STYLES ---------- */
