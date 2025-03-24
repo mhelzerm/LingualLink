@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PictureThis - Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <!-- Website Header (Desktop) -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-hands" style="margin-right: 10px;"></i>
+                    PictureThis
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html" class="active">Games</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="login-btn">Log In</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- App-style Header Section -->
+    <section class="app-header">
+        <div class="container">
+            <div class="app-header-content">
+                <div class="app-header-left">
+                    <h1 class="header-title">Choose Your Game Mode</h1>
+                </div>
+                <!--<div class="app-header-right">
+                    <div class="points-badge">
+                        <i class="fas fa-crown crown-icon"></i>
+                        <span>42 Points</span>
+                    </div>
+                    <div class="user-avatar">
+                        MH
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Game Options -->
+            <div class="game-options">
+                <!-- Host Game Option -->
+                <a href= "host.html" class="game-option">
+                    <div class="option-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3 class="option-title">Host a Game</h3>
+                        <p class="option-description">Create a multiplayer session and invite friends to join. You'll control the game settings and content modules.</p>
+                    </div>
+                </a>
+
+                <!-- Join Game Option -->
+                <a href= "join.html" class="game-option">
+                    <div class="option-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3 class="option-title">Join a Game</h3>
+                        <p class="option-description">Enter a game code to join a friend's session. Challenge each other and learn sign language together!</p>
+                    </div>
+                </a>
+
+                <!-- Single Player Option -->
+                <a href= "signleplayer.html" class="game-option">
+                    <div class="option-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3 class="option-title">Single Player</h3>
+                        <p class="option-description">Practice at your own pace with our adaptive learning system. Perfect for beginners or advanced practice.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Compact Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-compact">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-hands" style="margin-right: 10px;"></i>
+                        PictureThis
+                    </div>
+                    <div class="copyright">
+                        <p>&copy; 2025 PictureThis All Rights Reserved</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Tab Navigation (Mobile Only) -->
+    <div class="bottom-tabs">
+        <div class="tab-items">
+            <a href="#" class="tab-item">
+                <div class="tab-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span class="tab-label">Home</span>
+            </a>
+            <a href="#" class="tab-item">
+                <div class="tab-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <span class="tab-label">Modules</span>
+            </a>
+            <a href="#" class="tab-item active">
+                <div class="tab-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <span class="tab-label">Games</span>
+            </a>
+            <a href="#" class="tab-item">
+                <div class="tab-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <span class="tab-label">Profile</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
