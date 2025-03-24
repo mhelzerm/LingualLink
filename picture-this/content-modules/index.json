@@ -1,0 +1,12 @@
+[
+    {
+        "name": "ASL",
+        "path": "/ASL",
+        "alphabet": "abcdefghijklmnopqrstuvwxyz"
+    },
+    {
+        "name": "LSE",
+        "path": "/LSE",
+        "alphabet": "abc1defghijkl2mn3opqr4stuvwxyz"
+    }
+]

@@ -1,0 +1,152 @@
+[
+    {
+        "word": "a",
+        "image": "image/a.jpg",
+        "audio": "audio/a.mp3"
+    },
+    {
+        "word": "b",
+        "image": "image/b.jpg",
+        "audio": "audio/b.mp3"
+    },
+    {
+        "word": "c",
+        "image": "image/c.jpg",
+        "audio": "audio/c.mp3"
+    },
+    {
+        "word": "ch",
+        "image": "image/ch.jpg",
+        "audio": "audio/ch.mp3"
+    },
+    {
+        "word": "d",
+        "image": "image/d.jpg",
+        "audio": "audio/d.mp3"
+    },
+    {
+        "word": "e",
+        "image": "image/e.jpg",
+        "audio": "audio/e.mp3"
+    },
+    {
+        "word": "f",
+        "image": "image/f.jpg",
+        "audio": "audio/f.mp3"
+    },
+    {
+        "word": "g",
+        "image": "image/g.jpg",
+        "audio": "audio/g.mp3"
+    },
+    {
+        "word": "h",
+        "image": "image/h.jpg",
+        "audio": "audio/h.mp3"
+    },
+    {
+        "word": "i",
+        "image": "image/i.jpg",
+        "audio": "audio/i.mp3"
+    },
+    {
+        "word": "j",
+        "image": "image/j.jpg",
+        "audio": "audio/j.mp3"
+    },
+    {
+        "word": "k",
+        "image": "image/k.jpg",
+        "audio": "audio/k.mp3"
+    },
+    {
+        "word": "l",
+        "image": "image/l.jpg",
+        "audio": "audio/l.mp3"
+    },
+    {
+        "word": "ll",
+        "image": "image/ll.jpg",
+        "audio": "audio/ll.mp3"
+    },
+    {
+        "word": "m",
+        "image": "image/m.jpg",
+        "audio": "audio/m.mp3"
+    },
+    {
+        "word": "n",
+        "image": "image/n.jpg",
+        "audio": "audio/n.mp3"
+    },
+    {
+        "word": "ñ",
+        "image": "image/ñ.jpg",
+        "audio": "audio/ñ.mp3"
+    },
+    {
+        "word": "o",
+        "image": "image/o.jpg",
+        "audio": "audio/o.mp3"
+    },
+    {
+        "word": "p",
+        "image": "image/p.jpg",
+        "audio": "audio/p.mp3"
+    },
+    {
+        "word": "q",
+        "image": "image/q.jpg",
+        "audio": "audio/q.mp3"
+    },
+    {
+        "word": "r",
+        "image": "image/r.jpg",
+        "audio": "audio/r.mp3"
+    },
+    {
+        "word": "rr",
+        "image": "image/rr.jpg",
+        "audio": "audio/rr.mp3"
+    },
+    {
+        "word": "s",
+        "image": "image/s.jpg",
+        "audio": "audio/s.mp3"
+    },
+    {
+        "word": "t",
+        "image": "image/t.jpg",
+        "audio": "audio/t.mp3"
+    },
+    {
+        "word": "u",
+        "image": "image/u.jpg",
+        "audio": "audio/u.mp3"
+    },
+    {
+        "word": "v",
+        "image": "image/v.jpg",
+        "audio": "audio/v.mp3"
+    },
+    {
+        "word": "w",
+        "image": "image/w.jpg",
+        "audio": "audio/w.mp3"
+    },
+    {
+        "word": "x",
+        "image": "image/x.jpg",
+        "audio": "audio/x.mp3"
+    },
+    {
+        "word": "y",
+        "image": "image/y.jpg",
+        "audio": "audio/y.mp3"
+    },
+    {
+        "word": "z",
+        "image": "image/z.jpg",
+        "audio": "audio/z.mp3"
+    }
+]
