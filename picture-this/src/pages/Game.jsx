@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../css/main.css';
-import '../../css/games.css';
+import '../css/main.css';
+import '../css/games.css';
 
 const Game = () => {
   return (

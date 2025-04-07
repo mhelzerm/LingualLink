@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../css/other-pages.css';
+import '../css/other-pages.css';
 
 const modules = Array(8).fill({
   title: 'Spanish Lesson IV',

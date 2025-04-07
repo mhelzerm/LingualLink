@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/other-pages.css';
 
-function Navbar() {
+const Navbar = () => {
     return (
         <>
             <header>
                 <div class="container">
                     <nav className="navbar">
                         <div class="logo">
-                            <i class="fas fa-hands"></i>
+                            <i class="fas fa-hands" style={{marginRight: "15px"}}></i>
                             PictureThis
                         </div>
                         <ul class="nav-links">
