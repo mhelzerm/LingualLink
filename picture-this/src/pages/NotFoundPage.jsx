@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import '../../css/other-pages.css';
 
 //This page loads on a 404 page not found error
 
