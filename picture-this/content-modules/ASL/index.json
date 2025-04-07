@@ -1,0 +1,132 @@
+[
+    {
+        "word": "a",
+        "image": "image/a.png",
+        "audio": "audio/a.mp3"
+    },
+    {
+        "word": "b",
+        "image": "image/b.png",
+        "audio": "audio/b.mp3"
+    },
+    {
+        "word": "c",
+        "image": "image/c.png",
+        "audio": "audio/c.mp3"
+    },
+    {
+        "word": "d",
+        "image": "image/d.png",
+        "audio": "audio/d.mp3"
+    },
+    {
+        "word": "e",
+        "image": "image/e.png",
+        "audio": "audio/e.mp3"
+    },
+    {
+        "word": "f",
+        "image": "image/f.png",
+        "audio": "audio/f.mp3"
+    },
+    {
+        "word": "g",
+        "image": "image/g.png",
+        "audio": "audio/g.mp3"
+    },
+    {
+        "word": "h",
+        "image": "image/h.png",
+        "audio": "audio/h.mp3"
+    },
+    {
+        "word": "i",
+        "image": "image/i.png",
+        "audio": "audio/i.mp3"
+    },
+    {
+        "word": "j",
+        "image": "image/j.png",
+        "audio": "audio/j.mp3"
+    },
+    {
+        "word": "k",
+        "image": "image/k.png",
+        "audio": "audio/k.mp3"
+    },
+    {
+        "word": "l",
+        "image": "image/l.png",
+        "audio": "audio/l.mp3"
+    },
+    {
+        "word": "m",
+        "image": "image/m.png",
+        "audio": "audio/m.mp3"
+    },
+    {
+        "word": "n",
+        "image": "image/n.png",
+        "audio": "audio/n.mp3"
+    },
+    {
+        "word": "o",
+        "image": "image/o.png",
+        "audio": "audio/o.mp3"
+    },
+    {
+        "word": "p",
+        "image": "image/p.png",
+        "audio": "audio/p.mp3"
+    },
+    {
+        "word": "q",
+        "image": "image/q.png",
+        "audio": "audio/q.mp3"
+    },
+    {
+        "word": "r",
+        "image": "image/r.png",
+        "audio": "audio/r.mp3"
+    },
+    {
+        "word": "s",
+        "image": "image/s.png",
+        "audio": "audio/s.mp3"
+    },
+    {
+        "word": "t",
+        "image": "image/t.png",
+        "audio": "audio/t.mp3"
+    },
+    {
+        "word": "u",
+        "image": "image/u.png",
+        "audio": "audio/u.mp3"
+    },
+    {
+        "word": "v",
+        "image": "image/v.png",
+        "audio": "audio/v.mp3"
+    },
+    {
+        "word": "w",
+        "image": "image/w.png",
+        "audio": "audio/w.mp3"
+    },
+    {
+        "word": "x",
+        "image": "image/x.png",
+        "audio": "audio/x.mp3"
+    },
+    {
+        "word": "y",
+        "image": "image/y.png",
+        "audio": "audio/y.mp3"
+    },
+    {
+        "word": "z",
+        "image": "image/z.png",
+        "audio": "audio/z.mp3"
+    }
+]

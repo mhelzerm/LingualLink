@@ -1,177 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <!--use: 'npm run dev' in the terminal to load this page.
-    Make sure terminal directory is set to 'picture-this' use: 'cd picture this' to set directory.
-    JSX seems to not load if alternatives like Live Server extension are used-->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picture This! - Learn Sign Language Through Games</title>
+<!--Use: 'npm run dev' in the terminal to load in browser.
+Make sure terminal directory is set to 'picture-this' use: 'cd picture-this' to set directory.
+May not run properly if Live Server extension or other alternatives are used
+Using 'npm install' may be required, especially if running on new machine-->
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" /> <!--Replace this with our own icon-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picture This</title>
+    <!--fonts loaded here will appear on all pages without issue-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <i class="fas fa-hands" style="margin-right: 10px;"></i>
-                    PictureThis
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Modules</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="example.html">React Example</a></li><!--temp href to navigate to React example, remove this sometime before production-->
-                </ul>
-                <div class="auth-buttons">
-                    <a href="login.html" class="login-btn">Log In</a>
-                    <a href="signup.html" class="signup-btn">Sign Up</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Learn Sign Language With PictureThis</h1>
-                <p>Bridge communication gaps with our fun, interactive games designed to teach American Sign Language and help build communication skills for all ages.</p>
-                <a href="signup.html" class="cta-btn">Start Learning Now</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://placehold.co/600x400" alt="People learning sign language through games">
-            </div>
-        </div>
-    </section>
-
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Why Choose PictureThis?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h3>Fun Games</h3>
-                    <p>Learn through interactive games that make sign language easy and enjoyable to master.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Community Challenges</h3>
-                    <p>Challenge friends, track your progress, and compete on leaderboards.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-comment-dots"></i>
-                    </div>
-                    <h3>Communication Tools</h3>
-                    <p>Build sentences with audio snippets and sign language to express needs and ideas.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Custom Content</h3>
-                    <p>Create and share your own content modules for games and communication.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-universal-access"></i>
-                    </div>
-                    <h3>Accessible For All</h3>
-                    <p>Designed for all ages and abilities, with customizable accessibility options.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-wifi-slash"></i>
-                    </div>
-                    <h3>Offline Mode</h3>
-                    <p>Download modules to practice and communicate even without an internet connection.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Sign Up</h3>
-                    <p>Create your account and personalize your learning journey.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Choose Modules</h3>
-                    <p>Select from various content modules based on your communication needs.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Play Games</h3>
-                    <p>Learn through fun, interactive games that adapt to your skill level.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Track Progress</h3>
-                    <p>Monitor your improvement and earn rewards as you advance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials">
-        <div class="container">
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">
-                        <i class="fas fa-hands" style="margin-right: 10px;"></i>
-                        PictureThis
-                    </div>
-                    <p class="footer-description">An educational app that bridges communication gaps through interactive sign language games and tools.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h3>Learn</h3>
-                    <ul>
-                        <li><a href="#">Content Modules</a></li>
-                        <li><a href="#">Communication Tools</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Community</h3>
-                    <ul>
-                        <li><a href="#">Challenges</a></li>
-                        <li><a href="#">Leaderboards</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact Us </a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 PictureThis All Rights Reserved </p>
-            </div>
-        </div>
-    </footer>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--calls on a JSX file loading it to the page. JSX allows for a combination of javascript and html elements
+    here is a useful link explaining JSX https://www.w3schools.com/react/react_jsx.asp -->
+    <script type="module" src="./src/index.jsx"></script>
+  </body>
 </html>
