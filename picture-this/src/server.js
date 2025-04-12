@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 import pkg from 'pg';
 
 const { Pool } = pkg;
-dotenv.config();
+dotenv.config({path: '../.env'});
 
 const app = express();
 app.use(cors());
