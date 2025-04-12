@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../../css/other-pages.css';
+import '../css/other-pages.css';
 
 const HostSettings = () => {
   const [formData, setFormData] = useState({

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/other-pages.css';
+import '../css/other-pages.css';
 
 const HostLoading = () => {
   return (

@@ -2,10 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 
+import { UserProvider } from './components/UserContext';  // Import the UserProvider
 import NavbarWrapper from './NavbarWrapper'
 
 //import each page here
 import Home from './pages/Home'
+//import App from './App.jsx'
 import NotFoundPage from './pages/NotFoundPage'
 import Communication from './pages/Communication'
 import Game from './pages/Game'
@@ -15,6 +17,9 @@ import HostLoading from './pages/HostLoading'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
+import LoginPage from './pages/LoginPage'
+import SingupPage from './pages/SignupPage'
+import ProfilePage from './pages/Profile'
 
 //Assigns paths to their elements
 const router = createBrowserRouter([
@@ -27,6 +32,10 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home />,
             },
+            //{
+            //    path: '/',
+            //    element: <App />
+            //},
             {
                 path: '/communication',
                 element: <Communication />,
@@ -59,13 +68,27 @@ const router = createBrowserRouter([
                 path: '/faq',
                 element: <FAQ />,
             },
+            {
+                path: '/login',
+                element: <LoginPage />,
+            },
+            {
+                path: '/signup',
+                element: <SingupPage />,
+            },
+            {
+                path: '/profile',
+                element: <ProfilePage />,
+            },
         ]
     }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <UserProvider>
+            <RouterProvider router={router} />
+        </UserProvider>
     </React.StrictMode>,
 )
 

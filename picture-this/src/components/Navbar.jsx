@@ -1,8 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useOutletContext, Outlet, Link, useNavigate } from 'react-router-dom';
 import '../css/other-pages.css';
+import { useUser } from '../components/UserContext';  // Import the context
 
 function Navbar() {
+    const { user, logout } = useUser();
+    const navigate = useNavigate();
+
     return (
         <>
             <header>
@@ -21,8 +25,23 @@ function Navbar() {
                             <li><Link to="/about">About</Link></li>
                         </ul>
                         <div class="auth-buttons">
-                            <Link to="login.html" class="login-btn">Log In</Link>
-                            <Link to="signup.html" class="signup-btn">Sign Up</Link>
+                            {user ? (
+                                <>
+                                    <span>Welcome, {user.username}!</span>
+                                    <button onClick={() => {
+                                        navigate("/profile")
+                                    }}>
+                                        Profile Icon
+                                    </button>
+                                </>
+                            ) : (
+                                <>
+                                    <Link to="/login" class="login-btn">Log In</Link>
+                                    <Link to="/signup" class="signup-btn">Sign Up</Link>
+                                </>
+                            )}
+                            
+                            
                         </div>
                     </nav>
                 </div>
