@@ -20,8 +20,9 @@ const Home = () => {
           </div>
           <div className="hero-image">
             <img
-              src="https://placehold.co/600x400"
+              src="..\src\assets\logo.gif"
               alt="People learning sign language through games"
+              width="400"
             />
           </div>
         </div>

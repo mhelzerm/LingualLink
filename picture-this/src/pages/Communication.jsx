@@ -52,6 +52,8 @@ const Communication = () => {
               Play
             </button>
           </div>
+        </div>
+        <div className="content-container d-flex" id="content-container">
           <div className="text-box flex-grow-1" id="sentence_builder">
             {sentence.map((entry, index) => (
               <img

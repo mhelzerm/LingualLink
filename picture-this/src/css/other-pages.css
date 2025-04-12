@@ -56,6 +56,7 @@ nav {
     font-size: 24px;
     font-weight: 700;
     color: var(--primary);
+    text-decoration: none;
 }
 
 .logo a {
@@ -69,7 +70,7 @@ nav {
     margin-right: 10px;
 }
 
-.nav-links {
+/* .nav-links {
     display: flex;
     list-style: none;
 }
@@ -94,7 +95,94 @@ nav {
     margin-left: 20px;
     font-weight: 600;
 }
+*/
 
+/* New navbar css */
+/*.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+    */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 10;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.auth-section {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links .auth-section {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.nav-links .auth-section span {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+/*
+.login-btn, .signup-btn, .auth-section button {
+    background: none;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem;
+    text-align: left;
+    width: 100%;
+    text-decoration: none;
+}
+    */
+/*
 .login-btn {
     color: var(--primary);
 }
@@ -106,6 +194,7 @@ nav {
     border-radius: 20px;
     transition: background-color 0.3s;
 }
+    */
 
 .signup-btn:hover {
     background-color: var(--primary-dark);
@@ -275,7 +364,7 @@ footer {
     border-radius: 30px 30px;
     text-decoration: none;
     transition: background-color 0.3s;
-    translate: 950px;
+    
 }
 
 .module-btn{
@@ -1021,6 +1110,34 @@ footer {
         width: 100%;
         max-width: 250px;
         margin-bottom: 15px;
+    }
+
+    /* New navbar css */
+    .menu-icon {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .nav-links {
+        display: none; /* hide nav links by default on small screens */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 200px;
+        padding: 1rem;
+        z-index: 1000;
+    }
+    
+    .nav-links.active {
+        display: flex; /* show them when menu is toggled open */
+    }
+    
+    .auth-buttons {
+        display: none; /* optional: hide these or move them to the dropdown */
     }
 }
 

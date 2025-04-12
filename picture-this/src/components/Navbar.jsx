@@ -2,29 +2,60 @@ import React from 'react';
 import { useOutletContext, Outlet, Link, useNavigate } from 'react-router-dom';
 import '../css/other-pages.css';
 import { useUser } from '../components/UserContext';  // Import the context
+import { useState } from "react";
 
 function Navbar() {
     const { user, logout } = useUser();
     const navigate = useNavigate();
+    const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
         <>
             <header>
                 <div class="container">
                     <nav className="navbar">
-                        <div class="logo">
+                        {/*<div class="logo">
                             <i class="fas fa-hands"></i>
                             PictureThis
+                        </div> */}
+                        <Link to="/" className="logo" onClick={() => setMobileMenuOpen(false)}>
+                            <i class="fas fa-hands"></i>
+                            PictureThis
+                        </Link>
+
+                        {/* Hamburger icon for small screens */}
+                        <div className="menu-icon" onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
+                            <i className={isMobileMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
                         </div>
-                        <ul class="nav-links">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/communication">Communicate</Link></li>
-                            <li><Link to="/game">Games</Link></li>
-                            <li><Link to="#">Modules</Link></li>
-                            <li><Link to="/contact">Community</Link></li>
-                            <li><Link to="/about">About</Link></li>
+
+                        {/* Navigation links */}
+                        <ul className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}>
+                            <li><Link to="/communication" onClick={() => setMobileMenuOpen(false)}>Communicate</Link></li>
+                            <li><Link to="/game" onClick={() => setMobileMenuOpen(false)}>Games</Link></li>
+                            <li><Link to="#" onClick={() => setMobileMenuOpen(false)}>Modules</Link></li>
+                            <li><Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Community</Link></li>
+                            <li><Link to="/about" onClick={() => setMobileMenuOpen(false)}>About</Link></li>
+                            {/* Auth Buttons Inside Dropdown */}
+                            <li className="auth-section">
+                                {user ? (
+                                    <>
+                                        <span>Welcome, {user.username}!</span>
+                                        <button onClick={() => {
+                                            navigate("/profile");
+                                            setMobileMenuOpen(false);
+                                        }}>
+                                            Profile Icon
+                                        </button>
+                                    </>
+                                ) : (
+                                    <>
+                                        <Link to="/login" className="login-btn" onClick={() => setMobileMenuOpen(false)}>Log In</Link>
+                                        <Link to="/signup" className="signup-btn" onClick={() => setMobileMenuOpen(false)}>Sign Up</Link>
+                                    </>
+                                )}
+                            </li>
                         </ul>
-                        <div class="auth-buttons">
+                        {/* <div class="auth-buttons">
                             {user ? (
                                 <>
                                     <span>Welcome, {user.username}!</span>
@@ -43,6 +74,7 @@ function Navbar() {
                             
                             
                         </div>
+                        */}
                     </nav>
                 </div>
             </header>
