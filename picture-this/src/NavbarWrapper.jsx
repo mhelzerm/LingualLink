@@ -24,7 +24,7 @@ function NavbarWrapper() {
                 //console.log(decodedToken.username)
                 setUser({
                     id: decodedToken.id,
-                    username: decodedToken.username,
+                    fullname: decodedToken.fullname,
                     email: decodedToken.email,
                 });
             }

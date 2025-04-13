@@ -5,6 +5,7 @@ import { jwtDecode } from "jwt-decode";
 const UserContext = createContext();
 
 export const useUser = () => {
+    //console.log("useUser called");
     return useContext(UserContext);
 };
 
@@ -19,11 +20,14 @@ export const UserProvider = ({ children }) => {
                 localStorage.removeItem('token');
                 setUser(null);
             } else {
+                //console.log("decodedToken")
+                //console.log(decodedToken)
                 setUser({
                     id: decodedToken.id,
-                    username: decodedToken.username,
+                    fullname: decodedToken.fullname,
                     email: decodedToken.email,
                 });
+                //console.log(user.fullname)
             }
         }
     }, []);

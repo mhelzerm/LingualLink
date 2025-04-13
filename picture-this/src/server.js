@@ -39,13 +39,13 @@ console.log("Secret key:", SECRET_KEY)
 
 // Register
 app.post('/register', async (req, res) => {
-  const { username, email, password } = req.body;
+  const { fullname, email, password, usertype } = req.body;
   const hashed = await bcrypt.hash(password, 10);
 
   try {
     const newUser = await pool.query(
-      'INSERT INTO users (username, email, password_hash) VALUES ($1, $2, $3) RETURNING id, username, email',
-      [username, email, hashed]
+      'INSERT INTO users (fullname, email, password_hash, usertype) VALUES ($1, $2, $3, $4) RETURNING id, fullname, email',
+      [fullname, email, hashed, usertype]
     );
     res.json(newUser.rows[0]);
   } catch (err) {
@@ -64,9 +64,10 @@ app.post('/login', async (req, res) => {
 
     const valid = await bcrypt.compare(password, user.password_hash);
     if (!valid) return res.status(400).json({ error: 'Invalid password' });
-
-    const token = jwt.sign({ id: user.id, username: user.username, email: user.email }, SECRET_KEY, { expiresIn: '1h' });
-    res.json({ token, user: { id: user.id, username: user.username, email: user.email } });
+    console.log("user.fullname")
+    console.log(user.fullname)
+    const token = jwt.sign({ id: user.id, fullname: user.fullname, email: user.email }, SECRET_KEY, { expiresIn: '1h' });
+    res.json({ token, user: { id: user.id, fullname: user.fullname, email: user.email } });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -80,7 +81,7 @@ app.get('/profile', authenticateToken, async (req, res) => {
   try {
     console.log("post profile")
     const userId = req.user.id;
-    const result = await pool.query('SELECT id, username, email FROM users WHERE id = $1', [userId]);
+    const result = await pool.query('SELECT id, fullname, email FROM users WHERE id = $1', [userId]);
     const user = result.rows[0];
     if (!user) return res.status(404).json({ error: 'User not found' });
 

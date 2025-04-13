@@ -7,8 +7,7 @@ import '../css/common.css';
 const ProfilePage = () => {
     const [activeTab, setActiveTab] = useState('profile');
     const [isEditing, setIsEditing] = useState(false);
-    const { user, logout } = useUser();
-    const { setUser } = useUser();
+    const { setUser, user, logout } = useUser();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -28,10 +27,12 @@ const ProfilePage = () => {
         fetchProfile();
     }, []);
 
+    if (!user) return (<div>Loading...</div>);
+
     // Dummy user data
     const userData = {
-        name: 'John Doe',
-        email: 'john.doe@example.com',
+        name: user.fullname,
+        email: user.email,
         bio: 'I am learning ASL to communicate better with my deaf friends.'
     };
 
@@ -52,7 +53,7 @@ const ProfilePage = () => {
             <div className="profile-sidebar">
                 <div className="user-info">
                     <div className="avatar">
-                        <span>JD</span>
+                        <span>{user.fullname.split(/\s/).reduce((response,word)=> response+=word.slice(0,1),'')}</span>
                     </div>
                     <h2>{userData.name}</h2>
                     <p>{userData.email}</p>

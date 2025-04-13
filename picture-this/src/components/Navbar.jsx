@@ -39,12 +39,12 @@ function Navbar() {
                             <li className="auth-section">
                                 {user ? (
                                     <>
-                                        <span>Welcome, {user.username}!</span>
-                                        <button onClick={() => {
+                                        <span>Welcome, {user.fullname}!</span>
+                                        <button className="avatar-nav" onClick={() => {
                                             navigate("/profile");
                                             setMobileMenuOpen(false);
                                         }}>
-                                            Profile Icon
+                                            {user.fullname.split(/\s/).reduce((response,word)=> response+=word.slice(0,1),'')}
                                         </button>
                                     </>
                                 ) : (

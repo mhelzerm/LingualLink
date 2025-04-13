@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 import '../css/common.css';
 
 function SignupPage() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    fullName: '',
+    fullname: '',
     email: '',
     password: '',
-    userType: 'student'
+    usertype: 'student'
   });
   const [showPassword, setShowPassword] = useState(false);
   
@@ -18,11 +21,20 @@ function SignupPage() {
     });
   };
   
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Signup attempt with:', formData);
     // Add your signup logic here
-    window.location.href = '/login';
+      e.preventDefault();
+      const { fullname, email, password, usertype } = formData;
+      
+      try {
+        await axios.post(`${import.meta.env.VITE_API_BASE_URL}/register`, { fullname, email, password, usertype });
+        alert("User registered successfully!");
+      } catch (err) {
+          console.error(err.response?.data?.error || "Registration failed");
+      }
+    navigate("/login")
   };
 
   return (
@@ -35,12 +47,12 @@ function SignupPage() {
         
         <form onSubmit={handleSubmit} className="signup-form">
           <div className="form-group">
-            <label htmlFor="fullName">Full Name</label>
+            <label htmlFor="fullname">Full Name</label>
             <input
               type="text"
-              id="fullName"
-              name="fullName"
-              value={formData.fullName}
+              id="fullname"
+              name="fullname"
+              value={formData.fullname}
               onChange={handleChange}
               required
             />
@@ -82,34 +94,34 @@ function SignupPage() {
           <div className="form-group">
             <label>I am a:</label>
             <div className="user-type-options">
-              <label className={formData.userType === 'student' ? 'active' : ''}>
+              <label className={formData.usertype === 'student' ? 'active' : ''}>
                 <input
                   type="radio"
-                  name="userType"
+                  name="usertype"
                   value="student"
-                  checked={formData.userType === 'student'}
+                  checked={formData.usertype === 'student'}
                   onChange={handleChange}
                 />
                 Student
               </label>
               
-              <label className={formData.userType === 'user' ? 'active' : ''}>
+              <label className={formData.usertype === 'user' ? 'active' : ''}>
                 <input
                   type="radio"
-                  name="userType"
+                  name="usertype"
                   value="user"
-                  checked={formData.userType === 'user'}
+                  checked={formData.usertype === 'user'}
                   onChange={handleChange}
                 />
                 Regular User
               </label>
               
-              <label className={formData.userType === 'parent' ? 'active' : ''}>
+              <label className={formData.usertype === 'parent' ? 'active' : ''}>
                 <input
                   type="radio"
-                  name="userType"
+                  name="usertype"
                   value="parent"
-                  checked={formData.userType === 'parent'}
+                  checked={formData.usertype === 'parent'}
                   onChange={handleChange}
                 />
                 Parent/Guardian

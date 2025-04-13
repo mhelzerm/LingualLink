@@ -22,7 +22,7 @@ const Profile = () => {
         fetchProfile();
     }, []);
 
-    return user ? <div>Welcome, {user.username}!</div> : <div>Please log in.</div>;
+    return user ? <div>Welcome, {user.fullname}!</div> : <div>Please log in.</div>;
 };
 
 export default Profile;

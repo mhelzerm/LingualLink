@@ -171,6 +171,27 @@ nav {
     font-weight: bold;
 }
 
+.avatar-nav {
+    width: 60px;
+    height: 60px;
+    background-color: #7c3aed;
+    border-radius: 50%;
+    border-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .avatar-nav span {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
 /*
 .login-btn, .signup-btn, .auth-section button {
     background: none;
