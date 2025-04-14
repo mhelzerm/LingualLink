@@ -40,30 +40,7 @@ const SinglePlayer = () => {
 
   return (
     <>
-      <header>
-        <div className="container">
-          <nav>
-            <div className="logo">
-              <Link to="/">
-                <i className="fas fa-hands"></i>
-                PictureThis
-              </Link>
-            </div>
-            <ul className="nav-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="#" className="active">Games</Link></li>
-              <li><Link to="#">Modules</Link></li>
-              <li><Link to="#">Community</Link></li>
-              <li><Link to="/about">About</Link></li>
-            </ul>
-            <div className="auth-buttons">
-              <Link to="/login" className="login-btn">Log In</Link>
-              <Link to="/signup" className="signup-btn">Sign Up</Link>
-            </div>
-          </nav>
-        </div>
-      </header>
-
+      
       <section className="page-header">
         <div className="container">
           <h1>Single Player</h1>

@@ -14,6 +14,7 @@ import Game from './pages/Game'
 import HostGame from './pages/HostGame'
 import HostSettings from './pages/HostSettings'
 import HostLoading from './pages/HostLoading'
+import SinglePlayer from './pages/SinglePlayer'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
             {
                 path: '/hostloading',
                 element: <HostLoading />,
+            },
+            {
+                path: '/singleplayer',
+                element: <SinglePlayer />,
             },
             {
                 path: '/about',
