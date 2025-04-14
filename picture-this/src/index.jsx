@@ -7,7 +7,6 @@ import NavbarWrapper from './NavbarWrapper'
 
 //import each page here
 import Home from './pages/Home'
-//import App from './App.jsx'
 import NotFoundPage from './pages/NotFoundPage'
 import Communication from './pages/Communication'
 import Game from './pages/Game'
@@ -33,10 +32,6 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home />,
             },
-            //{
-            //    path: '/',
-            //    element: <App />
-            //},
             {
                 path: '/communication',
                 element: <Communication />,
