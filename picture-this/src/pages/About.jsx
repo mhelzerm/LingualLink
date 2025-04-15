@@ -21,8 +21,12 @@ const About = () => {
             <p>We believe that communication is a fundamental right, and our app serves as a tool for users who lack communication skills or knowledge to connect with others through audio, hand signals, or other languages.</p>
             <p>What makes us unique is our gamified approach to learning sign language, which makes the experience enjoyable while providing valuable skills that can improve lives.</p>
           </div>
-          <div className="mission-image">
-            <img src="https://placehold.co/500x300" alt="PictureThis mission visual" />
+          <div className="hero-image">
+            <img
+              src="..\src\assets\logo.gif"
+              alt="Picture This logo"
+              width="400"
+            />
           </div>
         </div>
       </section>
@@ -33,24 +37,62 @@ const About = () => {
           <h2>Meet Our Team</h2>
           <p className="section-intro">We're a passionate group of developers, educators, and communication specialists dedicated to making sign language learning accessible to everyone.</p>
           <div className="team-grid">
-            {[
-              { name: 'Mary Borg', title: 'Project Manager', bio: 'With a background in special education, Mary brings valuable insights into making our app accessible and effective for all users.' },
-              { name: 'Andre Buclay', title: 'Lead Developer', bio: 'Andre\'s expertise in educational technology has been crucial in developing our interactive learning platform.' },
-              { name: 'Jack Clarke', title: 'UX Designer', bio: 'Jack ensures our app is intuitive, engaging, and accessible for users of all ages and abilities.' },
-              { name: 'Aminata Diop', title: 'Content Specialist', bio: 'Aminata develops our learning modules and ensures the accuracy of our sign language content.' },
-              { name: 'Micah Helzerman', title: 'Game Developer', bio: 'Micah creates the engaging games that make learning sign language fun and effective.' },
-              { name: 'Jeanne Weimer', title: 'Accessibility Specialist', bio: 'Jeanne ensures our app meets the needs of users with various abilities and learning styles.' },
-              { name: 'Leen Yasin', title: 'Community Manager', bio: 'Leen fosters our user community and gathers feedback to help us continuously improve.' },
-            ].map((member, index) => (
-              <div className="team-member" key={index}>
-                <div className="member-photo">
-                  <img src="https://placehold.co/150x150" alt={member.name} />
-                </div>
-                <h3>{member.name}</h3>
-                <p className="member-title">{member.title}</p>
-                <p className="member-bio">{member.bio}</p>
+            <div className="team-member">
+              <div className="member-photo">
+                <img src="..\src\assets\mary-borg.png" alt="Mary Borg" />
               </div>
-            ))}
+              <h3>Mary Borg</h3>
+              <p className="member-title">Project Manager</p>
+              <p className="member-bio">With a background in special education, Mary brings valuable insights into making our app accessible and effective for all users.</p>
+            </div>
+            <div className="team-member">
+              <div className="member-photo">
+                <img src="..\src\assets\andre-buclay.png" alt="Andre Buclay" />
+              </div>
+              <h3>Andre Buclay</h3>
+              <p className="member-title">Lead Developer</p>
+              <p className="member-bio">Andre's expertise in educational technology has been crucial in developing our interactive learning platform.</p>
+            </div>
+            <div className="team-member">
+              <div className="member-photo">
+                <img src="..\src\assets\jack-clarke.png" alt="Jack Clarke" />
+              </div>
+              <h3>Jack Clarke</h3>
+              <p className="member-title">UX Designer</p>
+              <p className="member-bio">Jack ensures our app is intuitive, engaging, and accessible for users of all ages and abilities.</p>
+            </div>
+            <div className="team-member">
+              <div className="member-photo">
+                <img src="..\src\assets\aminata-diop.png" alt="Aminata Diop" />
+              </div>
+              <h3>Aminata Diop</h3>
+              <p className="member-title">Content Specialist</p>
+              <p className="member-bio">Aminata develops our learning modules and ensures the accuracy of our sign language content.</p>
+            </div>
+            <div className="team-member">
+              <div className="member-photo">
+                <img src="..\src\assets\micah-helzerman.png" alt="Micah Helzerman" />
+              </div>
+              <h3>Micah Helzerman</h3>
+              <p className="member-title">Game Developer</p>
+              <p className="member-bio">Micah creates the engaging games that make learning sign language fun and effective.</p>
+            </div>
+            <div className="team-member">
+              <div className="member-photo">
+                <img src="..\src\assets\jeanne-weimer.png" alt="Jeanne Weimer" />
+              </div>
+              <h3>Jeanne Weimer</h3>
+              <p className="member-title">Accessibility Specialist</p>
+              <p className="member-bio">Jeanne ensures our app meets the needs of users with various abilities and learning styles.</p>
+            </div>
+            <div className="team-member">
+              <div className="member-photo">
+                <img src="..\src\assets\leen-yasin.png" alt="Leen Yasin" />
+              </div>
+              <h3>Leen Yasin</h3>
+              <p className="member-title">Community Manager</p>
+              <p className="member-bio">Leen fosters our user community and gathers feedback to help us continuously improve.</p>
+            </div>
           </div>
         </div>
       </section>

@@ -21,7 +21,7 @@ const Home = () => {
           <div className="hero-image">
             <img
               src="..\src\assets\logo.gif"
-              alt="People learning sign language through games"
+              alt="Picture This logo"
               width="400"
             />
           </div>

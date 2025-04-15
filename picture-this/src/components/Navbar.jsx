@@ -32,7 +32,6 @@ function Navbar() {
                         <ul className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}>
                             <li><Link to="/communication" onClick={() => setMobileMenuOpen(false)}>Communicate</Link></li>
                             <li><Link to="/game" onClick={() => setMobileMenuOpen(false)}>Games</Link></li>
-                            <li><Link to="#" onClick={() => setMobileMenuOpen(false)}>Modules</Link></li>
                             <li><Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link></li>
                             <li><Link to="/about" onClick={() => setMobileMenuOpen(false)}>About</Link></li>
                             {/* Auth Buttons Inside Dropdown */}
