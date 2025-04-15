@@ -40,7 +40,7 @@ const SinglePlayer = () => {
 
   return (
     <>
-      
+
       <section className="page-header">
         <div className="container">
           <h1>Single Player</h1>
@@ -58,9 +58,9 @@ const SinglePlayer = () => {
                 </div>
                 <h3>{module.title}</h3>
                 <p>{module.creator}</p>
-                <a 
-                  href="#" 
-                  className="module-btn" 
+                <a
+                  href="#"
+                  className="module-btn"
                   onClick={(e) => {
                     e.preventDefault();
                     showLanguagePopupHandler();
@@ -83,8 +83,8 @@ const SinglePlayer = () => {
               <p>Choose the language for game instructions and interface</p>
             </div>
             <div className="language-options">
-              <div 
-                className={`language-option ${selectedLanguage === 'english' ? 'selected' : ''}`} 
+              <div
+                className={`language-option ${selectedLanguage === 'english' ? 'selected' : ''}`}
                 onClick={() => selectLanguage('english')}
               >
                 <div className="language-flag">
@@ -92,9 +92,9 @@ const SinglePlayer = () => {
                 </div>
                 <h3>English</h3>
               </div>
-              
-              <div 
-                className={`language-option ${selectedLanguage === 'spanish' ? 'selected' : ''}`} 
+
+              <div
+                className={`language-option ${selectedLanguage === 'spanish' ? 'selected' : ''}`}
                 onClick={() => selectLanguage('spanish')}
               >
                 <div className="language-flag">
@@ -104,9 +104,9 @@ const SinglePlayer = () => {
               </div>
             </div>
             <div className="popup-actions">
-              <button 
-                className="continue-btn" 
-                disabled={!selectedLanguage} 
+              <button
+                className="continue-btn"
+                disabled={!selectedLanguage}
                 onClick={startGame}
               >
                 Continue
@@ -127,36 +127,32 @@ const SinglePlayer = () => {
                 <i className="fas fa-hands" style={{ marginRight: '10px' }}></i>
                 PictureThis
               </div>
-              <p className="footer-description">An educational app that bridges communication gaps through interactive sign language games and tools.</p>
-              <div className="social-links">
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-                <a href="#"><i className="fab fa-instagram"></i></a>
-                <a href="#"><i className="fab fa-youtube"></i></a>
+              <p className="footer-description">
+                An educational app that bridges communication gaps through
+                interactive sign language games and tools.
+              </p>
+            </div>
+
+            <div className="footer-links">
+              <br />
+              <div className="cta-buttons">
+                <Link to="/faq" className="primary-btn">FAQ</Link>
               </div>
             </div>
             <div className="footer-links">
-              <h3>Learn</h3>
-              <ul>
-                <li><a href="#">Content Modules</a></li>
-                <li><a href="#">Communication Tools</a></li>
-              </ul>
+              <br />
+              <div className="cta-buttons">
+                <Link to="/communication" className="primary-btn">Communicate</Link>
+              </div>
             </div>
             <div className="footer-links">
-              <h3>Community</h3>
-              <ul>
-                <li><a href="#">Challenges</a></li>
-                <li><a href="#">Leaderboards</a></li>
-              </ul>
-            </div>
-            <div className="footer-links">
-              <h3>Support</h3>
-              <ul>
-                <li><Link to="/faq">FAQ</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
-              </ul>
+              <br />
+              <div className="cta-buttons">
+                <Link to="/game" className="primary-btn">Games</Link>
+              </div>
             </div>
           </div>
+
           <div className="copyright">
             <p>&copy; 2025 PictureThis All Rights Reserved</p>
           </div>

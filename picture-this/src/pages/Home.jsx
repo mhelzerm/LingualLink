@@ -129,38 +129,28 @@ const Home = () => {
                 An educational app that bridges communication gaps through
                 interactive sign language games and tools.
               </p>
-              <div className="social-links">
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-                <a href="#"><i className="fab fa-instagram"></i></a>
-                <a href="#"><i className="fab fa-youtube"></i></a>
+            </div>
+            
+            <div className="footer-links">
+              <br />
+              <div className="cta-buttons">
+                <Link to="/faq" className="primary-btn">FAQ</Link>
               </div>
             </div>
-
             <div className="footer-links">
-              <h3>Learn</h3>
-              <ul>
-                <li><a href="#">Content Modules</a></li>
-                <li><a href="#">Communication Tools</a></li>
-              </ul>
+              <br />
+              <div className="cta-buttons">
+                <Link to="/communication" className="primary-btn">Communicate</Link>
+              </div>
             </div>
-
             <div className="footer-links">
-              <h3>Community</h3>
-              <ul>
-                <li><a href="#">Challenges</a></li>
-                <li><a href="#">Leaderboards</a></li>
-              </ul>
-            </div>
-
-            <div className="footer-links">
-              <h3>Support</h3>
-              <ul>
-                <li><Link to="/faq">FAQ</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
-              </ul>
+              <br />
+              <div className="cta-buttons">
+                <Link to="/game" className="primary-btn">Games</Link>
+              </div>
             </div>
           </div>
+
           <div className="copyright">
             <p>&copy; 2025 PictureThis All Rights Reserved</p>
           </div>

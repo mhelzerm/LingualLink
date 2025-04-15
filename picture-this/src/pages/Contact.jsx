@@ -107,37 +107,29 @@ const Contact = () => {
                 <i className="fas fa-hands" style={{ marginRight: '10px' }}></i>
                 PictureThis
               </div>
-              <p className="footer-description">An educational app that bridges communication gaps through interactive sign language games and tools.</p>
-              <div className="social-links">
-                <Link to="/"><i className="fab fa-facebook-f"></i></Link>
-                <Link to="/"><i className="fab fa-twitter"></i></Link>
-                <Link to="/"><i className="fab fa-instagram"></i></Link>
-                <Link to="/"><i className="fab fa-youtube"></i></Link>
+              <p className="footer-description">
+                An educational app that bridges communication gaps through
+                interactive sign language games and tools.
+              </p>
+            </div>
+
+            <div className="footer-links">
+              <br />
+              <div className="cta-buttons">
+                <Link to="/faq" className="primary-btn">FAQ</Link>
               </div>
             </div>
-
             <div className="footer-links">
-              <h3>Learn</h3>
-              <ul>
-                <li><Link to="/">Content Modules</Link></li>
-                <li><Link to="/">Communication Tools</Link></li>
-              </ul>
+              <br />
+              <div className="cta-buttons">
+                <Link to="/communication" className="primary-btn">Communicate</Link>
+              </div>
             </div>
-
             <div className="footer-links">
-              <h3>Community</h3>
-              <ul>
-                <li><Link to="/">Challenges</Link></li>
-                <li><Link to="/">Leaderboards</Link></li>
-              </ul>
-            </div>
-
-            <div className="footer-links">
-              <h3>Support</h3>
-              <ul>
-                <li><Link to="/faq">FAQ</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
-              </ul>
+              <br />
+              <div className="cta-buttons">
+                <Link to="/game" className="primary-btn">Games</Link>
+              </div>
             </div>
           </div>
 

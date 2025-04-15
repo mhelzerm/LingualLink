@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/other-pages.css';
 
 const About = () => {
@@ -106,7 +107,6 @@ const About = () => {
             <p>The future of PictureThis includes:</p>
             <ul>
               <li>Expanding our content to include more languages and dialects</li>
-              <li>Enhancing our AI capabilities to provide more personalized learning experiences</li>
               <li>Building partnerships with schools and organizations to reach more users</li>
               <li>Developing advanced features to support those with diverse communication needs</li>
             </ul>
@@ -142,8 +142,8 @@ const About = () => {
           <h2>Join Our Journey</h2>
           <p>Be part of our mission to make communication accessible for everyone.</p>
           <div className="cta-buttons">
-            <a href="/signup" className="primary-btn">Sign Up Now</a>
-            <a href="/contact" className="secondary-btn">Contact Us</a>
+            <Link to="/signup" className="primary-btn">Sign Up Now</Link>
+            <Link to="/contact" className="secondary-btn">Contact Us</Link>
           </div>
         </div>
       </section>
@@ -157,36 +157,32 @@ const About = () => {
                 <i className="fas fa-hands" style={{ marginRight: '10px' }}></i>
                 PictureThis
               </div>
-              <p className="footer-description">An educational app that bridges communication gaps through interactive sign language games and tools.</p>
-              <div className="social-links">
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-                <a href="#"><i className="fab fa-instagram"></i></a>
-                <a href="#"><i className="fab fa-youtube"></i></a>
+              <p className="footer-description">
+                An educational app that bridges communication gaps through
+                interactive sign language games and tools.
+              </p>
+            </div>
+
+            <div className="footer-links">
+              <br />
+              <div className="cta-buttons">
+                <Link to="/faq" className="primary-btn">FAQ</Link>
               </div>
             </div>
             <div className="footer-links">
-              <h3>Learn</h3>
-              <ul>
-                <li><a href="#">Content Modules</a></li>
-                <li><a href="#">Communication Tools</a></li>
-              </ul>
+              <br />
+              <div className="cta-buttons">
+                <Link to="/communication" className="primary-btn">Communicate</Link>
+              </div>
             </div>
             <div className="footer-links">
-              <h3>Community</h3>
-              <ul>
-                <li><a href="#">Challenges</a></li>
-                <li><a href="#">Leaderboards</a></li>
-              </ul>
-            </div>
-            <div className="footer-links">
-              <h3>Support</h3>
-              <ul>
-                <li><a href="/faq">FAQ</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-              </ul>
+              <br />
+              <div className="cta-buttons">
+                <Link to="/game" className="primary-btn">Games</Link>
+              </div>
             </div>
           </div>
+
           <div className="copyright">
             <p>&copy; 2025 PictureThis All Rights Reserved</p>
           </div>
