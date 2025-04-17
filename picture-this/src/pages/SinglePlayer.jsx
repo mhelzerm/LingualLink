@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-// Import the CSS in your main app file or component that loads this one
-// import './css/other-pages.css';
+import '../css/other-pages.css';
+import '../css/popup.css';
 
 const SinglePlayer = () => {
   const [showLanguagePopup, setShowLanguagePopup] = useState(false);
@@ -40,7 +40,6 @@ const SinglePlayer = () => {
 
   return (
     <>
-
       <section className="page-header">
         <div className="container">
           <h1>Single Player</h1>
