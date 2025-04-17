@@ -1,11 +1,33 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import '../css/other-pages.css';
 import '../css/popup.css';
+import '../css/singleplayer.css';
+import axios from 'axios';
 
 const SinglePlayer = () => {
   const [showLanguagePopup, setShowLanguagePopup] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(null);
+  const [modules, setModules] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchModules = async () => {
+      try {
+        const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/games`);
+        setModules(res.data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching game modules:', error);
+        setLoading(false);
+      }
+    };
+  
+    fetchModules();
+  }, []);
+  
 
   const showLanguagePopupHandler = () => {
     setShowLanguagePopup(true);
@@ -20,23 +42,14 @@ const SinglePlayer = () => {
     setSelectedLanguage(language);
   };
 
-  const startGame = () => {
+  const startGame = (game_id) => {
     hideLanguagePopup();
-    alert(`Starting game in ${selectedLanguage === 'english' ? 'English' : 'Spanish'}`);
-    // Redirect would happen here
-    // history.push(`/play-game?language=${selectedLanguage}`);
+    //alert(`Starting game in ${selectedLanguage === 'english' ? 'English' : 'Spanish'}`);
+    // Add your redirect here using `useNavigate()` if needed
+    console.log(modules[game_id - 1])
+    console.log(game_id)
+    navigate(`/game/${game_id}`)
   };
-
-  const modules = [
-    { id: 1, title: 'Basic ASL Alphabet', creator: 'SignPlay Team', image: 'https://placehold.co/200x100' },
-    { id: 2, title: 'Common Greetings', creator: 'micahh2023', image: 'https://placehold.co/200x100' },
-    { id: 3, title: 'Family Members', creator: 'jclarke_asl', image: 'https://placehold.co/200x100' },
-    { id: 4, title: 'Numbers 1-20', creator: 'aminata_d', image: 'https://placehold.co/200x100' },
-    { id: 5, title: 'Colors and Shapes', creator: 'leeny_signs', image: 'https://placehold.co/200x100' },
-    { id: 6, title: 'Food Items', creator: 'jeannew', image: 'https://placehold.co/200x100' },
-    { id: 7, title: 'Daily Activities', creator: 'SignPlay Team', image: 'https://placehold.co/200x100' },
-    { id: 8, title: 'Emergency Signs', creator: 'andreb_asl', image: 'https://placehold.co/200x100' }
-  ];
 
   return (
     <>
@@ -49,31 +62,35 @@ const SinglePlayer = () => {
 
       <section className="modules">
         <div className="container">
-          <div className="modules-grid">
-            {modules.map((module) => (
-              <div className="modules-card" key={module.id}>
-                <div className="modules-icon">
-                  <img src={module.image} alt={module.title} />
+          {loading ? (
+            <p>Loading modules...</p>
+          ) : (
+            <div className="modules-grid">
+              {modules.map((module) => (
+                <div className="modules-card" key={module.game_id}>
+                  <div className="modules-icon">
+                    <img src={'https://placehold.co/200x100'} alt={module.game_name} />
+                  </div>
+                  <h3>{module.game_name}</h3>
+                  <p>Creator Unknown</p>
+                  <a
+                    href="#"
+                    className="module-btn"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      startGame(module.game_id);
+                    }}
+                  >
+                    Start Game
+                  </a>
                 </div>
-                <h3>{module.title}</h3>
-                <p>{module.creator}</p>
-                <a
-                  href="#"
-                  className="module-btn"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    showLanguagePopupHandler();
-                  }}
-                >
-                  Start Game
-                </a>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Language Selection Popup */}
+      {/* Language selection popup - unchanged */}
       {showLanguagePopup && (
         <div className="popup-overlay" style={{ display: 'flex' }}>
           <div className="language-popup">
@@ -118,6 +135,7 @@ const SinglePlayer = () => {
         </div>
       )}
 
+      {/* Footer stays the same */}
       <footer>
         <div className="container">
           <div className="footer-content">

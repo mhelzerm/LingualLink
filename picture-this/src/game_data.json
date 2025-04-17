@@ -1,0 +1,46 @@
+[
+    {
+        "game_id": 1,
+        "game_name": "ASL Alphabet",
+        "content_module": "ASL", 
+        "questions": [
+            {
+                "question": "hand",
+                "answers": "Help Hold Hand None_of_the_above",
+                "correct_answer": "hand"
+            },
+            {
+                "question": "signal",
+                "answers": "Scenic Signal Value None_of_the_above",
+                "correct_answer": "signal"
+            },
+            {
+                "question": "language",
+                "answers": "Language Learning Document None_of_the_above",
+                "correct_answer": "language"
+            }
+        ]
+    },
+    {
+        "game_id": 2,
+        "game_name": "LSE Alfabeto",
+        "content_module": "LSE", 
+        "questions": [
+            {
+                "question": "hola",
+                "answers": "Hilo Hora Hola Ninguna_de_las_anteriores",
+                "correct_answer": "hola"
+            },
+            {
+                "question": "silbar",
+                "answers": "Sentir Silbar Somera Ninguna_de_las_anteriores",
+                "correct_answer": "silbar"
+            },
+            {
+                "question": "luminosa",
+                "answers": "Lamentar Librarse Limpieza Ninguna_de_las_anteriores",
+                "correct_answer": "ninguna_de_las_anteriores"
+            }
+        ]
+    }
+]

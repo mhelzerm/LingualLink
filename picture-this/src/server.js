@@ -5,12 +5,29 @@ import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import pkg from 'pg';
 
+import game_data from './game_data.json' with {type: "json"};
+
+console.log(game_data[0]["questions"])
+
 const { Pool } = pkg;
 dotenv.config({path: '../.env'});
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+app.get('/games', (req, res) => {
+  res.json(game_data);
+});
+
+app.get('/games/:id', (req, res) => {
+  const gameId = parseInt(req.params.id);
+  const game = game_data.find(g => g.game_id === gameId);
+  if (!game) {
+    return res.status(404).json({ error: 'Game not found' });
+  }
+  res.json(game);
+});
 
 app.use((req, res, next) => {
   console.log(`[${req.method}] ${req.originalUrl}`);

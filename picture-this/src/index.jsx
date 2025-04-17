@@ -20,6 +20,8 @@ import FAQ from './pages/FAQ'
 import LoginPage from './pages/LoginPage'
 import SingupPage from './pages/SignupPage'
 import ProfilePage from './pages/Profile'
+import SinglePlayerGame from './pages/SingePlayerGame'
+import GamePageWrapper from './pages/GamePageWrapper'
 
 //Assigns paths to their elements
 const router = createBrowserRouter([
@@ -79,6 +81,10 @@ const router = createBrowserRouter([
             {
                 path: '/profile',
                 element: <ProfilePage />,
+            },
+            {
+                path: '/game/:gameId',
+                element: <GamePageWrapper />,
             },
         ]
     }

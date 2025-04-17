@@ -1,0 +1,72 @@
+/* Default layout for larger screens (desktop or tablet) */
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Allows a flexible grid */
+    gap: 20px;
+  }
+  
+  /* Styling for the module card */
+  .modules-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .modules-icon img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .module-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    translate:60px;
+  }
+  
+  .module-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Mobile-friendly layout */
+  @media (max-width: 768px) {
+    .modules-grid {
+      grid-template-columns: 1fr;  /* Single column layout on mobile */
+    }
+  
+    /* Adjust header font size for mobile */
+    .page-header h1 {
+      font-size: 24px;
+    }
+  
+    .page-header p {
+      font-size: 16px;
+    }
+  
+    .modules-card {
+      margin-bottom: 20px;
+    }
+    .module-btn {
+      translate:0px;
+    }
+  }
+  
+  /* Even smaller screen sizes (for very narrow phones) */
+  @media (max-width: 480px) {
+    .modules-grid {
+      grid-template-columns: 1fr;  /* Ensure 1 column even on very small devices */
+    }
+  
+    .module-btn {
+      padding: 8px 16px;  /* Smaller buttons for small screens */
+      translate:0px;
+    }
+  }
+  
