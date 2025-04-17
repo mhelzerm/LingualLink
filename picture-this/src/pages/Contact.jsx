@@ -14,6 +14,7 @@ const Contact = () => {
 
       <section className="contact-section">
         <div className="container">
+        <h2>We lack the information to properly fill this page at the moment, we intend to properly fill it at a later date.</h2>
           <div className="contact-grid">
             <div className="contact-info">
               <h2>Get in Touch</h2>
@@ -54,17 +55,6 @@ const Contact = () => {
                     <p>Available on our website</p>
                     <p>7 days a week, 8am - 8pm EST</p>
                   </div>
-                </div>
-              </div>
-
-              <div className="social-connect">
-                <h3>Connect With Us</h3>
-                <div className="social-links">
-                  <a href="#" className="social-link"><i className="fab fa-facebook-f"></i></a>
-                  <a href="#" className="social-link"><i className="fab fa-twitter"></i></a>
-                  <a href="#" className="social-link"><i className="fab fa-instagram"></i></a>
-                  <a href="#" className="social-link"><i className="fab fa-linkedin-in"></i></a>
-                  <a href="#" className="social-link"><i className="fab fa-youtube"></i></a>
                 </div>
               </div>
             </div>
