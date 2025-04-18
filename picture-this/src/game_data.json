@@ -42,5 +42,70 @@
                 "correct_answer": "ninguna_de_las_anteriores"
             }
         ]
+    },
+    {
+        "game_id": 3,
+        "game_name": "Animal Kingdom (ASL)",
+        "content_module": "ASL",
+        "questions": [
+            {
+                "question": "elephant",
+                "answers": "Giraffe Rhino Elephant None_of_the_above",
+                "correct_answer": "elephant"
+            },
+            {
+                "question": "penguin",
+                "answers": "Duck Penguin Seagull None_of_the_above",
+                "correct_answer": "penguin"
+            },
+            {
+                "question": "kangaroo",
+                "answers": "Wallaby Kangaroo Koala None_of_the_above",
+                "correct_answer": "kangaroo"
+            },
+            {
+                "question": "tiger",
+                "answers": "Lion Panther Tiger None_of_the_above",
+                "correct_answer": "tiger"
+            },
+            {
+                "question": "dolphin",
+                "answers": "Whale Shark Dolphin None_of_the_above",
+                "correct_answer": "dolphin"
+            }
+        ]
+    },
+    {
+        "game_id": 4,
+        "game_name": "Animal Kingdom (Video)",
+        "content_module": "GIF",
+        "questions": [
+            {
+                "question": "dog",
+                "answers": "Giraffe Rhino Dog None_of_the_above",
+                "correct_answer": "dog"
+            },
+            {
+                "question": "cat",
+                "answers": "Duck Cat Seagull None_of_the_above",
+                "correct_answer": "cat"
+            },
+            {
+                "question": "bird",
+                "answers": "Wallaby Bird Koala None_of_the_above",
+                "correct_answer": "bird"
+            },
+            {
+                "question": "wolf",
+                "answers": "Lion Panther Wolf None_of_the_above",
+                "correct_answer": "wolf"
+            },
+            {
+                "question": "dinosaur",
+                "answers": "Whale Shark Dinosaur None_of_the_above",
+                "correct_answer": "dinosaur"
+            }
+        ]
     }
+    
 ]

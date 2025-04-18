@@ -29,30 +29,6 @@ const Game = () => {
       <main>
         <div className="container">
           <div className="game-options">
-            <Link to="/hostgame" className="game-option">
-              <div className="option-icon">
-                <i className="fas fa-users"></i>
-              </div>
-              <div className="option-content">
-                <h3 className="option-title">Host a Game</h3>
-                <p className="option-description">
-                  Create a multiplayer session and invite friends to join. You'll control the game settings and content modules.
-                </p>
-              </div>
-            </Link>
-
-            <Link to="/join" className="game-option">
-              <div className="option-icon">
-                <i className="fas fa-camera"></i>
-              </div>
-              <div className="option-content">
-                <h3 className="option-title">Join a Game</h3>
-                <p className="option-description">
-                  Enter a game code to join a friend's session. Challenge each other and learn sign language together!
-                </p>
-              </div>
-            </Link>
-
             <Link to="/singleplayer" className="game-option">
               <div className="option-icon">
                 <i className="fas fa-user"></i>
@@ -64,6 +40,32 @@ const Game = () => {
                 </p>
               </div>
             </Link>
+
+            <Link to="/game" className="game-option">
+              <div className="option-icon">
+                <i className="fas fa-users"></i>
+              </div>
+              <div className="option-content">
+                <h3 className="option-title">(WIP) Host a Game</h3>
+                <p className="option-description">
+                  Create a multiplayer session and invite friends to join. You'll control the game settings and content modules.
+                </p>
+              </div>
+            </Link>
+
+            <Link to="/game" className="game-option">
+              <div className="option-icon">
+                <i className="fas fa-camera"></i>
+              </div>
+              <div className="option-content">
+                <h3 className="option-title">(WIP) Join a Game</h3>
+                <p className="option-description">
+                  Enter a game code to join a friend's session. Challenge each other and learn sign language together!
+                </p>
+              </div>
+            </Link>
+
+            
           </div>
         </div>
       </main>

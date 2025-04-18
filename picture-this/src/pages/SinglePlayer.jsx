@@ -72,7 +72,7 @@ const SinglePlayer = () => {
                     <img src={'https://placehold.co/200x100'} alt={module.game_name} />
                   </div>
                   <h3>{module.game_name}</h3>
-                  <p>Creator Unknown</p>
+                  <p>Creator: PictureThis</p>
                   <a
                     href="#"
                     className="module-btn"

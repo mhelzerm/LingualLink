@@ -107,7 +107,7 @@ const GamePage = ({ gameId, onRestart }) => {
           setIsPaused(false);
           //console.log("setIsPaused(false);")
         }
-      }, 7000);
+      }, 4000);
     } else {
       setScore(prev => Math.max(0, prev - 10));
       setSelectedAnswer(null); // allow retry
@@ -129,16 +129,29 @@ const GamePage = ({ gameId, onRestart }) => {
 
   return (
     <div className="game-container">
-      <h2>{gameData.game_name}</h2>
+      <h2>{gameData.game_name} - Question {currentQuestionIndex+1} out of {gameData.questions.length}</h2>
       <div className="question-display">
-        {[...question.question].slice(0, revealedLetters).map((letter, i) => (
+        {gameData.content_module === "GIF" ? (
           <img
-            key={i}
-            src={`../../../content-modules/${gameData.content_module}/image/${letter.toLowerCase()}.png`}
-            //src={`https://example.com/images/${letter.toLowerCase()}.png`}
-            alt={letter}
-            onError={(e) => {
-                e.target.onerror = null; // prevent infinite loop
+            src={`../../../content-modules/GIF/image/${question.question}.gif`}
+            alt="GIF Question"
+            style={{
+              width: '100%',
+              maxWidth: '400px',
+              height: 'auto',
+              margin: '10px auto',
+              display: 'block'
+            }}
+            
+          />
+        ) : (
+          [...question.question].slice(0, revealedLetters).map((letter, i) => (
+            <img
+              key={i}
+              src={`../../../content-modules/${gameData.content_module}/image/${letter.toLowerCase()}.png`}
+              alt={letter}
+              onError={(e) => {
+                e.target.onerror = null;
                 e.target.src = `../../../content-modules/${gameData.content_module}/image/${letter.toLowerCase()}.jpg`;
               }}
               style={{
@@ -147,8 +160,9 @@ const GamePage = ({ gameId, onRestart }) => {
                 height: 'auto',
                 margin: '4px'
               }}
-          />
-        ))}
+            />
+          ))
+        )}
       </div>
 
       <div className="answer-buttons">

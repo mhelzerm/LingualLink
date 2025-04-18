@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-const ImageGrid = ({ onImageClick }) => {
+const ImageGrid = ({ onImageClick, language }) => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
     const loadImages = async () => {
       try {
-        const response = await fetch("/content-modules/ASL/index.json");
+        const response = await fetch(`/content-modules/${language}/index.json`);
         const data = await response.json();
         setImages(data);
       } catch (error) {
@@ -15,17 +15,21 @@ const ImageGrid = ({ onImageClick }) => {
     };
 
     loadImages();
-  }, []);
+  }, [language]); // Reload images when language changes
 
   const playAudio = (audioPath) => {
-    const audio = new Audio(`/content-modules/ASL/${audioPath}`);
+    const audio = new Audio(`/content-modules/${language}/${audioPath}`);
     audio.play();
   };
 
   return (
     <div className="image-grid mt-3" id="imageGrid">
       {images.map((entry, index) => (
-        <div className="letter-button btn btn-light position-relative" key={index} onClick={() => onImageClick(entry)}>
+        <div
+          className="letter-button btn btn-light position-relative"
+          key={index}
+          onClick={() => onImageClick(entry)}
+        >
           <button
             className="audio-button btn btn-outline-dark btn-sm"
             onClick={(e) => {
@@ -36,7 +40,7 @@ const ImageGrid = ({ onImageClick }) => {
             <i className="bi bi-volume-up-fill"></i>
           </button>
           <div>{entry.word.toUpperCase()}</div>
-          <img src={`/content-modules/ASL/${entry.image}`} alt={entry.word} />
+          <img src={`/content-modules/${language}/${entry.image}`} alt={entry.word} />
         </div>
       ))}
     </div>
