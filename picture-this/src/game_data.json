@@ -3,6 +3,7 @@
         "game_id": 1,
         "game_name": "ASL Alphabet",
         "content_module": "ASL", 
+        "logo": "ASL_logo.png",
         "questions": [
             {
                 "question": "hand",
@@ -25,6 +26,7 @@
         "game_id": 2,
         "game_name": "LSE Alfabeto",
         "content_module": "LSE", 
+        "logo": "LSE_logo.png",
         "questions": [
             {
                 "question": "hola",
@@ -47,6 +49,7 @@
         "game_id": 3,
         "game_name": "Animal Kingdom (ASL)",
         "content_module": "ASL",
+        "logo": "animal_kingdom_logo.jpg",
         "questions": [
             {
                 "question": "elephant",
@@ -79,6 +82,7 @@
         "game_id": 4,
         "game_name": "Animal Kingdom (Video)",
         "content_module": "GIF",
+        "logo": "animal_kingdom_logo.jpg",
         "questions": [
             {
                 "question": "dog",

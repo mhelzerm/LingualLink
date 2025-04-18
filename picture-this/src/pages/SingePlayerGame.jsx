@@ -70,6 +70,7 @@ const GamePage = ({ gameId, onRestart }) => {
   }, [gameData, showResult, isPaused, gameOver]);
 
   useEffect(() => {
+    if (!question || gameData?.content_module === "GIF") return;
     if (!question) return;
 
     setRevealedLetters(0);

@@ -69,7 +69,7 @@ const SinglePlayer = () => {
               {modules.map((module) => (
                 <div className="modules-card" key={module.game_id}>
                   <div className="modules-icon">
-                    <img src={'https://placehold.co/200x100'} alt={module.game_name} />
+                    <img src={`../../content-modules/${module.logo}`} alt={module.game_name} />
                   </div>
                   <h3>{module.game_name}</h3>
                   <p>Creator: PictureThis</p>
